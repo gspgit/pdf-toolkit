@@ -1098,3 +1098,40 @@ input#pageRange {
     margin: 2rem 0;
     color: #1976d2;
 }
+
+/* Excel to PDF Specific Styles */
+.excel-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.table-preview {
+    margin-top: 1rem;
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+th {
+    background: #f8f9fa;
+}
+
+.conversion-notice {
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #ef6c00;
+}
