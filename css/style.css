@@ -609,3 +609,91 @@ input#pageRange {
     border-radius: 6px;
     margin-top: 0.5rem;
 }
+
+/* Watermark Specific Styles */
+.watermark-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.watermark-type-tabs {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 1rem;
+    background: #f8f9fa;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+.watermark-options {
+    display: none;
+    margin-top: 2rem;
+}
+
+.watermark-options.show {
+    display: block;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.position-grid {
+    margin-top: 2rem;
+}
+
+.position-label {
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.pos-btn {
+    aspect-ratio: 1;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pos-btn.active {
+    background: #3498db;
+    color: white;
+}
+
+.image-preview {
+    margin-top: 1rem;
+    max-width: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
