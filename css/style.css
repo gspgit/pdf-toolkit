@@ -318,3 +318,42 @@ body {
 .instructions li {
     margin-bottom: 0.8rem;
 }
+
+/* Split PDF Specific Styles */
+.split-controls {
+    margin-top: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.input-group input[type="number"] {
+    width: 200px;
+    padding: 0.8rem;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.file-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.file-info p {
+    margin: 0.5rem 0;
+    color: #7f8c8d;
+}
