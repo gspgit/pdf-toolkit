@@ -953,3 +953,57 @@ input#pageRange {
     gap: 1rem;
     color: #2e7d32;
 }
+
+/* Unlock PDF Specific Styles */
+.unlock-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.password-input-group {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.password-wrapper {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 2.5rem;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.security-notice {
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #ef6c00;
+    margin: 2rem 0;
+}
+
+#passwordStatus {
+    height: 4px;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
