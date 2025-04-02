@@ -1253,3 +1253,30 @@ th {
     top: 0;
     left: 0;
 }
+/* css/style.css */
+.pdf-editor-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#pdfCanvas {
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.annotation {
+    position: absolute;
+    cursor: move;
+    transition: transform 0.2s;
+}
+
+.signature-pad {
+    position: fixed;
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
