@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Editor - PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="PDF Toolkit">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#tools">All Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#help">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PDF Editor Interface -->
+    <main class="tool-interface">
+        <div class="tool-header">
+            <h1><i class="fas fa-edit"></i> PDF Editor</h1>
+            <p class="tool-description">Edit PDF documents with multiple tools</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="pdf-editor-container">
+            <!-- Toolbar -->
+            <div class="editor-toolbar">
+                <button class="tool-btn" data-tool="text"><i class="fas fa-font"></i> Text</button>
+                <button class="tool-btn" data-tool="image"><i class="fas fa-image"></i> Image</button>
+                <button class="tool-btn" data-tool="highlight"><i class="fas fa-highlighter"></i> Highlight</button>
+                <button class="tool-btn" data-tool="draw"><i class="fas fa-pencil"></i> Draw</button>
+                <button class="tool-btn" data-tool="shape"><i class="fas fa-shapes"></i> Shapes</button>
+                <input type="color" id="colorPicker">
+                <button class="btn-primary" onclick="saveEditedPDF()"><i class="fas fa-save"></i> Save PDF</button>
+            </div>
+
+            <!-- PDF Viewer -->
+            <div class="pdf-viewer-container">
+                <div id="pdfViewer"></div>
+                <canvas id="pdfCanvas"></canvas>
+            </div>
+
+            <!-- Page Controls -->
+            <div class="page-controls">
+                <button onclick="rotatePage(-90)"><i class="fas fa-undo"></i> Rotate Left</button>
+                <button onclick="rotatePage(90)">Rotate Right <i class="fas fa-redo"></i></button>
+                <button onclick="deletePage()"><i class="fas fa-trash"></i> Delete Page</button>
+                <button onclick="addPage()"><i class="fas fa-plus"></i> Add Page</button>
+            </div>
+
+            <!-- Properties Panel -->
+            <div class="properties-panel">
+                <h4>Properties</h4>
+                <div id="textProperties" class="property-group">
+                    <input type="number" id="fontSize" min="8" max="72" value="12">
+                    <select id="fontFamily">
+                        <option>Arial</option>
+                        <option>Times New Roman</option>
+                        <option>Courier New</option>
+                    </select>
+                </div>
+                <div id="imageUpload" class="property-group" style="display:none;">
+                    <input type="file" id="imageInput" accept="image/*">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2024 PDF Toolkit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pdf-editor.js"></script>
+</body>
+</html>
