@@ -69,13 +69,17 @@ function initDragDrop() {
     });
 }
 
-// PDF Merging
+// PDF Merging (Updated with filename fix)
 async function mergeFiles() {
     if(files.length < 2) return alert('Please select at least 2 files');
     
     try {
         const mergedPdf = await PDFLib.PDFDocument.create();
         
+        // Get first file's name for merged PDF
+        const firstName = files[0].name.replace(/\.pdf$/i, '');
+        const mergedName = `${firstName}-merged.pdf`;
+
         for(const file of files) {
             const pdfBytes = await file.arrayBuffer();
             const pdf = await PDFLib.PDFDocument.load(pdfBytes);
@@ -85,7 +89,9 @@ async function mergeFiles() {
 
         const mergedBytes = await mergedPdf.save();
         const blob = new Blob([mergedBytes], { type: 'application/pdf' });
-        saveAs(blob, `merged-${Date.now()}.pdf`);
+        
+        // Use FileSaver.js with generated name
+        saveAs(blob, mergedName);
         
         alert('PDFs merged successfully!');
     } catch(err) {
