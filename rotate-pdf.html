@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate PDF - PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="PDF Toolkit">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#tools">All Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#help">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Rotate PDF Interface -->
+    <main class="tool-interface">
+        <div class="tool-header">
+            <h1><i class="fas fa-redo-alt"></i> Rotate PDF Pages</h1>
+            <p class="tool-description">Rotate PDF pages clockwise or counter-clockwise</p>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-content">
+                    <i class="fas fa-file-pdf"></i>
+                    <h3>Select PDF file or drag here</h3>
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                    <button class="btn-select" onclick="document.getElementById('fileInput').click()">
+                        Choose PDF
+                    </button>
+                </div>
+                <div class="file-info" id="fileInfo"></div>
+            </div>
+
+            <!-- Rotation Controls -->
+            <div class="rotation-controls">
+                <div class="rotation-options">
+                    <div class="option-group">
+                        <label>Rotation Angle:</label>
+                        <div class="angle-selector">
+                            <button class="angle-btn" data-degrees="-90">
+                                <i class="fas fa-undo"></i> 90° Left
+                            </button>
+                            <button class="angle-btn" data-degrees="90">
+                                90° Right <i class="fas fa-redo"></i>
+                            </button>
+                            <button class="angle-btn" data-degrees="180">
+                                180° Flip <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="option-group">
+                        <label>Pages to Rotate:</label>
+                        <input type="text" id="pageRange" 
+                               placeholder="All pages (e.g., 1,3-5)"
+                               pattern="^[0-9,\- ]+$">
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" onclick="rotatePDF()">
+                        <i class="fas fa-sync-alt"></i> Rotate Pages
+                    </button>
+                    <button class="btn-secondary" onclick="clearFile()">
+                        Clear File
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>How to Rotate:</h3>
+            <ol>
+                <li>Upload your PDF document</li>
+                <li>Select rotation angle and pages</li>
+                <li>Preview rotation direction</li>
+                <li>Download your rotated PDF</li>
+            </ol>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2024 PDF Toolkit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/rotate-pdf.js"></script>
+</body>
+</html>
