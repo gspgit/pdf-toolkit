@@ -357,3 +357,90 @@ body {
     margin: 0.5rem 0;
     color: #7f8c8d;
 }
+
+/* Compression Controls */
+.compression-controls {
+    margin-top: 2rem;
+}
+
+.compression-options {
+    margin-bottom: 2rem;
+}
+
+.option {
+    background: #f8f9fa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.option label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+input[type="radio"] {
+    accent-color: #3498db;
+}
+
+/* Results Section */
+.results {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.size-comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.size-comparison > div {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.original {
+    border: 2px solid #e74c3c;
+}
+
+.compressed {
+    border: 2px solid #27ae60;
+}
+
+.size-comparison h4 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.size-comparison p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-download {
+    width: 100%;
+    padding: 1.2rem;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #219a52;
+    transform: translateY(-2px);
+}
