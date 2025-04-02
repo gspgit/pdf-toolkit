@@ -569,3 +569,43 @@ input[type="radio"] {
     border-radius: 6px;
     text-align: center;
 }
+
+/* Rotate PDF Specific Styles */
+.rotation-controls {
+    margin-top: 2rem;
+}
+
+.angle-selector {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.angle-btn {
+    background: #f8f9fa;
+    border: 2px solid #3498db;
+    color: #2c3e50;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.angle-btn:hover {
+    background: #3498db;
+    color: white;
+    transform: scale(1.05);
+}
+
+.angle-btn i {
+    margin: 0 0.5rem;
+}
+
+input#pageRange {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+}
