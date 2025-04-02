@@ -1154,3 +1154,17 @@ th {
     margin: 2rem 0;
     color: #ef6c00;
 }
+
+/* PDF to Excel Specific Styles */
+.pdf-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+#pageRange {
+    padding: 0.5rem;
+    width: 120px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
