@@ -889,3 +889,67 @@ input#pageRange {
     gap: 1rem;
     color: #1976d2;
 }
+
+/* Protect PDF Specific Styles */
+.protect-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.security-settings {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+}
+
+.password-input {
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.password-input input {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 2.5rem;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7f8c8d;
+}
+
+.password-strength {
+    height: 4px;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.permissions {
+    margin-top: 1.5rem;
+}
+
+.permission-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.security-info {
+    background: #e8f5e9;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #2e7d32;
+}
