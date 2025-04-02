@@ -1179,3 +1179,77 @@ th {
     padding: 0.5rem;
     width: 140px;
 }
+
+/* PDF Editor Specific Styles */
+.pdf-editor-container {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.editor-toolbar {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.tool-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    background: white;
+}
+
+.tool-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pdf-viewer-container {
+    position: relative;
+    height: 80vh;
+    border: 1px solid #ddd;
+    overflow: auto;
+}
+
+#pdfCanvas {
+    border: 1px solid #eee;
+    margin: 1rem 0;
+}
+
+.page-controls {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.properties-panel {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.property-group {
+    margin: 1rem 0;
+}
+
+.annotation {
+    position: absolute;
+    cursor: move;
+}
+
+.drawing-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
