@@ -1007,3 +1007,47 @@ input#pageRange {
     border-radius: 2px;
     transition: all 0.3s ease;
 }
+
+/* PDF to PPT Specific Styles */
+.conversion-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.preview-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.page-preview {
+    margin-top: 1rem;
+    border: 2px dashed #3498db;
+    border-radius: 8px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-preview img {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+.settings-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.conversion-notice {
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #ef6c00;
+}
