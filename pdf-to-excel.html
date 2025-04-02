@@ -50,7 +50,16 @@
             </div>
 
             <!-- Conversion Options -->
-            <div class="conversion-options">
+           
+<div class="conversion-options">
+<!-- Add this to the conversion options section -->
+<div class="option-group">
+    <label>OCR Mode:</label>
+    <select id="ocrMode">
+        <option value="auto">Auto Detect</option>
+        <option value="force">Force OCR</option>
+    </select>
+</div>
                 <div class="option-group">
                     <label>Pages to Convert:</label>
                     <input type="text" id="pageRange" placeholder="All pages">
