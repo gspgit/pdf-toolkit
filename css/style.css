@@ -1051,3 +1051,50 @@ input#pageRange {
     margin: 2rem 0;
     color: #ef6c00;
 }
+/* OCR PDF Specific Styles */
+.ocr-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.ocr-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #3498db;
+    transition: width 0.3s ease;
+}
+
+.preview-pane {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    min-height: 200px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+}
+
+.ocr-notice {
+    background: #e3f2fd;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #1976d2;
+}
