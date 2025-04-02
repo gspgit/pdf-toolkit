@@ -1135,3 +1135,22 @@ th {
     margin: 2rem 0;
     color: #ef6c00;
 }
+
+/* Word to PDF Specific Styles */
+.conversion-options {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.conversion-notice {
+    background: #fff3e0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    color: #ef6c00;
+}
