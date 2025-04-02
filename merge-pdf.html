@@ -1,1 +1,81 @@
-me
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge PDF Files - PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header (Same as Index) -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="PDF Toolkit">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#tools">All Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#help">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Tool Interface -->
+    <main class="tool-interface">
+        <div class="tool-header">
+            <h1><i class="fas fa-copy"></i> Merge PDF Files</h1>
+            <p class="tool-description">Combine multiple PDF documents into one</p>
+        </div>
+
+        <!-- File Upload Section -->
+        <div class="upload-section">
+            <div class="drop-zone" id="dropZone">
+                <div class="drop-content">
+                    <i class="fas fa-file-upload"></i>
+                    <h3>Select PDF files or drag here</h3>
+                    <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+                    <button class="btn-select" onclick="document.getElementById('fileInput').click()">
+                        Choose Files
+                    </button>
+                </div>
+                <div class="file-list" id="fileList"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="mergeFiles()">
+                    <i class="fas fa-merge"></i> Merge PDFs
+                </button>
+                <button class="btn-secondary" onclick="clearFiles()">
+                    Clear Files
+                </button>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+            <h3>How to Merge PDFs:</h3>
+            <ol>
+                <li>Click "Choose Files" or drag PDFs into the zone</li>
+                <li>Arrange files using drag handles</li>
+                <li>Click "Merge PDFs" to combine files</li>
+                <li>Download your merged PDF</li>
+            </ol>
+        </div>
+    </main>
+
+    <!-- Footer (Same as Index) -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2024 PDF Toolkit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/merge-pdf.js"></script>
+</body>
+</html>
