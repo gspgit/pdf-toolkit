@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protect PDF - PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="PDF Toolkit">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#tools">All Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#help">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Protect PDF Interface -->
+    <main class="tool-interface">
+        <div class="tool-header">
+            <h1><i class="fas fa-lock"></i> Protect PDF</h1>
+            <p class="tool-description">Add password protection to PDF documents</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="protect-container">
+            <!-- File Upload -->
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-content">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Select PDF file or drag here</h3>
+                        <input type="file" id="fileInput" accept=".pdf" hidden>
+                        <button class="btn-select" onclick="document.getElementById('fileInput').click()">
+                            Choose PDF
+                        </button>
+                    </div>
+                    <div class="file-info" id="fileInfo"></div>
+                </div>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="security-settings">
+                <div class="input-group">
+                    <label for="userPassword">Document Password:</label>
+                    <div class="password-input">
+                        <input type="password" id="userPassword" placeholder="Enter password">
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                    <div class="password-strength" id="passwordStrength"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="ownerPassword">Owner Password (optional):</label>
+                    <div class="password-input">
+                        <input type="password" id="ownerPassword" placeholder="Enter owner password">
+                        <i class="fas fa-eye toggle-password"></i>
+                    </div>
+                </div>
+
+                <div class="permissions">
+                    <h4>Permissions:</h4>
+                    <div class="permission-options">
+                        <label>
+                            <input type="checkbox" name="permissions" value="print" checked>
+                            Allow Printing
+                        </label>
+                        <label>
+                            <input type="checkbox" name="permissions" value="modify" checked>
+                            Allow Modifications
+                        </label>
+                        <label>
+                            <input type="checkbox" name="permissions" value="copy" checked>
+                            Allow Copying
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="protectPDF()">
+                    <i class="fas fa-lock"></i> Protect PDF
+                </button>
+                <button class="btn-secondary" onclick="clearAll()">
+                    Clear All
+                </button>
+            </div>
+        </div>
+
+        <!-- Security Info -->
+        <div class="security-info">
+            <i class="fas fa-shield-alt"></i>
+            <p>Your document is encrypted using AES-256 encryption. Passwords are not stored or transmitted.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2024 PDF Toolkit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/protect-pdf.js"></script>
+</body>
+</html>
