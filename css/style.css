@@ -1168,3 +1168,14 @@ th {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+/* Add to existing PDF to Excel styles */
+.ocr-warning {
+    color: #d32f2f;
+    font-size: 0.9em;
+    margin-top: 0.5rem;
+}
+
+#ocrMode {
+    padding: 0.5rem;
+    width: 140px;
+}
