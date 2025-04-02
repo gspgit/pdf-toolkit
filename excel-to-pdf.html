@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to PDF - PDF Toolkit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img src="assets/logo.png" alt="PDF Toolkit">
+            </a>
+            <nav class="main-nav">
+                <a href="index.html#tools">All Tools</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#help">Help</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Excel to PDF Interface -->
+    <main class="tool-interface">
+        <div class="tool-header">
+            <h1><i class="fas fa-file-excel"></i> Excel to PDF</h1>
+            <p class="tool-description">Convert Excel spreadsheets to PDF documents</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="excel-container">
+            <!-- File Upload -->
+            <div class="upload-section">
+                <div class="drop-zone" id="dropZone">
+                    <div class="drop-content">
+                        <i class="fas fa-file-excel"></i>
+                        <h3>Select Excel file or drag here</h3>
+                        <input type="file" id="fileInput" accept=".xls,.xlsx" hidden>
+                        <button class="btn-select" onclick="document.getElementById('fileInput').click()">
+                            Choose File
+                        </button>
+                    </div>
+                    <div class="file-info" id="fileInfo"></div>
+                </div>
+            </div>
+
+            <!-- Conversion Options -->
+            <div class="conversion-options">
+                <div class="option-group">
+                    <label>Page Orientation:</label>
+                    <select id="pageOrientation">
+                        <option value="landscape">Landscape</option>
+                        <option value="portrait">Portrait</option>
+                    </select>
+                </div>
+                
+                <div class="option-group">
+                    <label>Conversion Mode:</label>
+                    <select id="conversionMode">
+                        <option value="table">As Table</option>
+                        <option value="image">As Image</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section">
+                <h4>Preview (First Sheet):</h4>
+                <div class="table-preview" id="tablePreview"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-primary" onclick="convertToPDF()">
+                    <i class="fas fa-file-pdf"></i> Convert to PDF
+                </button>
+                <button class="btn-secondary" onclick="clearAll()">
+                    Clear All
+                </button>
+            </div>
+        </div>
+
+        <!-- Conversion Notice -->
+        <div class="conversion-notice">
+            <i class="fas fa-info-circle"></i>
+            <p>Note: Complex formatting might not be preserved perfectly in table mode</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>© 2024 PDF Toolkit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/excel-to-pdf.js"></script>
+</body>
+</html>
