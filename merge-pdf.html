@@ -6,9 +6,11 @@
     <title>Merge PDF Files - PDF Toolkit</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
 </head>
 <body>
-    <!-- Header (Same as Index) -->
+    <!-- Header -->
     <header class="main-header">
         <div class="header-container">
             <a href="/" class="logo">
@@ -43,6 +45,11 @@
                 <div class="file-list" id="fileList"></div>
             </div>
 
+            <!-- Progress Bar -->
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill"></div>
+            </div>
+
             <!-- Action Buttons -->
             <div class="action-buttons">
                 <button class="btn-primary" onclick="mergeFiles()">
@@ -54,27 +61,42 @@
             </div>
         </div>
 
+        <!-- Page Order Customization -->
+        <div class="page-order-container">
+            <h3>Page Order Customization</h3>
+            <div class="pages-grid" id="pagesGrid"></div>
+            <div class="page-order-actions">
+                <button class="btn-secondary" onclick="resetPageOrder()">
+                    <i class="fas fa-undo"></i> Reset Order
+                </button>
+                <span class="page-count" id="pageCount">0 pages</span>
+            </div>
+        </div>
+
         <!-- Instructions -->
         <div class="instructions">
             <h3>How to Merge PDFs:</h3>
             <ol>
-                <li>Click "Choose Files" or drag PDFs into the zone</li>
-                <li>Arrange files using drag handles</li>
-                <li>Click "Merge PDFs" to combine files</li>
-                <li>Download your merged PDF</li>
+                <li>Select PDF files using button or drag & drop</li>
+                <li>Adjust page ranges using the inputs below each file</li>
+                <li>Drag files or individual pages to reorder</li>
+                <li>Preview final order in the page grid</li>
+                <li>Click "Merge PDFs" to generate combined file</li>
             </ol>
         </div>
     </main>
 
-    <!-- Footer (Same as Index) -->
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="footer-container">
             <p>© 2024 PDF Toolkit. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Notifications -->
+    <div class="notification-container" id="notificationContainer"></div>
+
     <!-- Scripts -->
-    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/merge-pdf.js"></script>
 </body>
